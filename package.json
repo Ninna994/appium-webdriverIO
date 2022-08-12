@@ -1,0 +1,24 @@
+{
+  "name": "mobileautomation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Nikolina Djekic",
+  "license": "ISC",
+  "dependencies": {
+    "@wdio/cli": "^7.20.9",
+    "appium": "^2.0.0-beta.43"
+  },
+  "devDependencies": {
+    "@wdio/appium-service": "^7.20.8",
+    "@wdio/local-runner": "^7.20.9",
+    "@wdio/mocha-framework": "^7.20.7",
+    "@wdio/spec-reporter": "^7.20.8",
+    "appium-uiautomator2-driver": "^2.4.6",
+    "appium-xcuitest-driver": "^4.9.0"
+  }
+}
