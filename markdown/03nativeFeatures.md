@@ -55,3 +55,13 @@
       "android=new UiScrollable(new UiSelector().scrollable(true)).setAsHorizontalList().scrollBackward()"
     );
 ```
+
+## Handle Permissions
+
+* Permissions are handled in capabilities ` "appium:autoGrantPermissions": true,`
+
+## setValue and addValue
+
+* set value first clears value and then inserts it
+* add value just adds value
+
