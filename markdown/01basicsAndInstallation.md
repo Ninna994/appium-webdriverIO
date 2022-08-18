@@ -124,3 +124,82 @@
 * *log level* - logging information
 * *baseUrl* - place to set baseUrl
 * *services* - used
+
+## MISC
+
+- Create `jsconfig.json` file for autocompletion
+
+```json
+  {
+    "compilerOptions": {
+        "types": [
+            "node",
+            "webdriverio/async",
+            "@wdio/mocha-framework"
+        ],
+        "module": "CommonJS"
+    }, 
+    "exclude": ["node_modules"]
+}
+```
+
+- Setup Babel to use next-generation JS features
+  - `npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/register`
+- Setup linter
+  - `npm i eslint --save-dev`
+  - `npm install eslint-plugin-wdio --save-dev`
+  - make file `.eslintrc`
+
+```json
+   {
+    "plugins":[
+        "wdio"
+    ],
+    "extends": ["plugin:wdio/recommended", "eslint:recommended"],
+    "parserOptions": {
+        "ecmaVeersion": "latest",
+        "sourceType": "module"
+    },
+    "env": {
+        "es6": true,
+        "mocha": true,
+        "node": true
+    }
+    
+}
+```
+
+## Implement HOOKS
+
+* Before Hook
+* Before Each Hook
+* After Hook
+* After Each Hook
+
+```js
+   before(async() => {
+
+   });
+
+   beforeEach(async() => {
+
+   });
+```
+
+
+## Framework folder structure
+
+- App
+- Test
+  - Screens
+    - Android
+    - iOS
+  - Specs
+    - Android
+    - iOS
+  - Data
+  - Utils
+    - helper functions
+- Config
+  - All configuration for wdio
+  - running `npx wdio config/wdio.android.conf.js`
