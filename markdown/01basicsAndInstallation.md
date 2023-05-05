@@ -49,9 +49,10 @@
    2. Open Android Studio
    3. Setup PATHS
       1. add user variable - ANDROID_HOME
-         1. path to Sdk folder
+         1. path to Sdk folder - should be something like --  C:\Users\UserName\AppData\Local\Android\Sdk
       2. add to PATH two new variables - /platform-tools and tools
          1. %ANDROID_HOME%\platform-tools
+         2. If tools is missing -  Quick fix: `Go to the Tools –> SDK manager –> SDK tools.  Deselect Hide obsolete packages option on the right bottom and further install Android SDK Tools(obsolete). A new folder named Tools is now generated in the SDK directory. (C:\Users\..\AppData\Local\Android\Sdk\tools.)`
 
 4. Setup Android Emulator
    1. Go to Android Studio > Virtual Device Manager > Create Virtual Device
